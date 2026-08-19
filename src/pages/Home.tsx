@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import fondoPiletazo2 from "../assets/fondoPiletazo2.png";
-import { Typography,Grid,Card,CardContent} from "@mui/material";
+import { Typography,Card,CardContent} from "@mui/material";
 import natacion from "../assets/natacion.jpg"
 
 

@@ -7,7 +7,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import App from './App.tsx'
-import { CssBaseline } from '@mui/material'
 import { BrowserRouter } from 'react-router-dom'
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';

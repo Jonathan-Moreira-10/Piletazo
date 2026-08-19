@@ -1,4 +1,4 @@
-import { CssBaseline,Box } from "@mui/material"
+import { CssBaseline } from "@mui/material"
 import NavBar from "./components/navBar/NavBar"
 import Footer from "./components/footer/Footer"
 import { Route, Routes } from "react-router-dom"
