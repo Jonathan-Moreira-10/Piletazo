@@ -1,4 +1,4 @@
-{
+{ "homepage": "https://Jonathan-Moreira-10.github.io/Piletazo",
   "name": "piletazo-actividades-acuaticas",
   "private": true,
   "version": "0.0.0",
@@ -32,7 +32,6 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "gh-pages": "^6.3.0",
-    "homepage": "https://Jonathan-Moreira-10.github.io/Piletazo",
     "globals": "^17.7.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.65.0",
