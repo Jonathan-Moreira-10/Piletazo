@@ -1,10 +1,14 @@
 import Box from "@mui/material/Box";
 import fondoPiletazo2 from "../assets/fondoPiletazo2.png";
-import { Typography } from "@mui/material";
+import { Typography,Grid,Card,CardContent} from "@mui/material";
+import natacion from "../assets/natacion.jpg"
+
 
 export default function Home() {
   return (
-    <Box
+    /*
+  Caja Main*/
+    <Box component="main"
       sx={{
         position: "relative",
         width: "100%",
@@ -12,7 +16,16 @@ export default function Home() {
         overflow: "hidden",
       }}
     >
-      <Box
+     { /*
+  Banner*/}
+      <Box component="section"
+      sx={{
+        position: "relative",
+        width: "100%",
+        minHeight: "100%",      
+        overflow: "hidden",
+      }}>
+       <Box
         component="img"
         src={fondoPiletazo2}
         alt="Banner"
@@ -36,11 +49,12 @@ export default function Home() {
           alignItems: "center",
           color: "white",
           textAlign: "center",
+          
 
         }}
       >
         <Typography variant="h1" 
-        sx={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)", fontWeight: "bold" ,mt:12,border:'ButtonShadow',color:'primary.main',
+        sx={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)", fontWeight: "bold" ,mt: { xs: 4, md: 12 },border:'ButtonShadow',color:'primary.main',
           fontSize:{
              xs: "clamp(1.5rem, 6vw, 3rem)", 
              sm: "clamp(2rem, 5vw, 3.5rem)", 
@@ -51,7 +65,7 @@ export default function Home() {
           Escuela de Natación
         </Typography>
         <Typography variant="h2" 
-        sx={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",fontWeight: "bold", mb:12,border:'ButtonShadow',color:'secundary.main',
+        sx={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)",fontWeight: "bold", mb: { xs: 4, md: 12 },border:'ButtonShadow',color:'secundary.main',
           fontSize:{
              xs: "clamp(1.5rem, 6vw, 3rem)", 
              sm: "clamp(2rem, 5vw, 3.5rem)", 
@@ -62,6 +76,125 @@ export default function Home() {
           Aprende • Mejora • Supérate
         </Typography>
       </Box>
+      </Box>
+      
+      {/*Seccion tarjetas */}
+   <Box component={"section"}
+      sx={{
+        display: "flex",
+        flexDirection: {md:"row",xs:"column"}, 
+        flexWrap: "wrap",      
+        width: "100%",
+      }}
+    >
+      {/* Tarjeta 1 */}
+      <Box component={"a"} href="./" sx={{textDecoration:"none", flex: {md:"0 0 50%",sm: "0 0 100%"},p:2,mt:2,mb:2, "&:hover img":{
+          opacity:1
+        }
+      }}>
+        <Box component="hr" sx={{ borderColor: "primary.main", my: 2}} />
+        <Card sx={{border:"none",boxShadow:"none",overflow: "hidden"
+       }}>
+         
+          <CardContent sx={{overflow:"hidden"}}> 
+            <Typography variant="h4" 
+            sx={{ fontWeight: "bold",border:'ButtonShadow',color:'primary.main',fontSize:"2rem"}}
+            >Deportes</Typography>
+            <Typography variant="h5" sx={{mt:2,mb:2}}>Ejercicios en el agua para mejorar tu salud.</Typography>
+            <Box
+              component="img"
+              src={natacion}
+              alt="Deportes"
+              sx={{ width: "100%", height: "80%", objectFit: "cover" ,transition: "opacity 0.9s ease",overflow:"hidden"
+                ,opacity:0.7
+              }}
+            />
+          </CardContent>
+          
+        </Card>
+        <Box component="hr" sx={{ borderColor: "primary.main", my: 2}} />
+
+      </Box>
+
+      {/* Tarjeta 2 */}
+      <Box component={"a"} href="./" sx={{textDecoration:"none", flex: {md:"0 0 50%",sm: "0 0 100%"},p:2,mt:2,mb:2, "&:hover img":{
+          opacity:1
+        }
+      }}>
+      <Box component="hr" sx={{ borderColor: "primary.main", my: 2 ,display:{xs:"none",sm:"block"}}} />
+        <Card sx={{border:"none",boxShadow:"none",overflow: "hidden"
+       }}>
+          <CardContent sx={{overflow:"hidden"}}> 
+            <Box
+              component="img"
+              src={natacion}
+              alt="Deportes"
+              sx={{ width: "100%", height: "80%", objectFit: "cover" ,transition: "opacity 0.9s ease",overflow:"hidden"
+                ,opacity:0.7}}
+            />
+            <Typography variant="h4" 
+            sx={{ fontWeight: "bold",border:'ButtonShadow',color:'primary.main',fontSize:"2rem"}}
+            >Deportes</Typography>
+            <Typography variant="h5" sx={{mt:2,mb:2}}>Ejercicios en el agua para mejorar tu salud.</Typography>
+          </CardContent>
+           
+        </Card>
+        <Box component="hr" sx={{ borderColor: "primary.main", my: 2}} />
+      </Box>
+
+      {/* Tarjeta 3 */}
+      <Box component={"a"} href="./" sx={{textDecoration:"none", flex: {md:"0 0 50%",sm: "0 0 100%"},p:2,mt:2,mb:2, "&:hover img":{
+          opacity:1
+        }
+      }}>
+      <Box component="hr" sx={{ borderColor: "primary.main", my: 2}} />
+        <Card sx={{border:"none",boxShadow:"none",overflow: "hidden"
+       }}>
+      
+          <CardContent sx={{overflow:"hidden"}}> 
+             <Typography variant="h4" 
+            sx={{ fontWeight: "bold",border:'ButtonShadow',color:'primary.main',fontSize:"2rem"}}
+            >Deportes</Typography>
+            <Typography variant="h5" sx={{mt:2,mb:2}}>Ejercicios en el agua para mejorar tu salud.</Typography>
+            <Box
+              component="img"
+              src={natacion}
+              alt="Deportes"
+              sx={{ width: "100%", height: "80%", objectFit: "cover" ,transition: "opacity 0.9s ease",overflow:"hidden"
+                ,opacity:0.7}}
+            />
+          </CardContent>
+           
+        </Card>
+      <Box component="hr" sx={{ borderColor: "primary.main", my: 2 ,display:{xs:"none",sm:"block"}}} />
+      </Box>
+      {/* Tarjeta 4 */}
+      <Box component={"a"} href="./" sx={{textDecoration:"none", flex: {md:"0 0 50%",sm: "0 0 100%"},p:2,mt:2,mb:2, "&:hover img":{
+          opacity:1
+        }
+      }}>
+      <Box component="hr" sx={{ borderColor: "primary.main", my: 2}} />
+        <Card sx={{border:"none",boxShadow:"none",overflow: "hidden"
+       }}>
+          <CardContent sx={{overflow:"hidden"}}> 
+            <Box
+              component="img"
+              src={natacion}
+              alt="Deportes"
+              sx={{ width: "100%", height: "80%", objectFit: "cover" ,transition: "opacity 0.9s ease",overflow:"hidden"
+                ,opacity:0.7}}
+            />
+            <Typography variant="h4" 
+            sx={{ fontWeight: "bold",border:'ButtonShadow',color:'primary.main',fontSize:"2rem"}}
+            >Deportes</Typography>
+            <Typography variant="h5" sx={{mt:2,mb:2}}>Ejercicios en el agua para mejorar tu salud.</Typography>
+          </CardContent>
+           
+        </Card>
+        <Box component="hr" sx={{ borderColor: "primary.main", my: 2}} />
+      </Box>
+    </Box>
+  
     </Box>
 
     
