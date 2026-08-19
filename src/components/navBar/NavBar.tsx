@@ -1,5 +1,5 @@
 
-import { AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Drawer, IconButton, Toolbar} from "@mui/material";
 import NavListDrawer from "./NavListDrawer";
 import { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -9,7 +9,7 @@ function NavBar({ navArrayLinks }: { navArrayLinks: { tittle: string; path: stri
 const [open, setOpen] = useState(false);
   return (
     <>
-    <AppBar  sx={{backgroundColor: 'green'}} position="fixed">
+    <AppBar  sx={{backgroundColor: 'primary.main'}} position="sticky">
       <Toolbar sx={{
     justifyContent: { xs: "space-between", sm: "initial" }}}>
         <IconButton onClick={() => setOpen(true)}  sx={{mr:0, borderColor:'white',display:{xs:'block', sm:'none'}}}
@@ -19,11 +19,14 @@ const [open, setOpen] = useState(false);
           <MenuIcon />
         </IconButton>
 
-        <Box sx={{display:{xs:'none', sm:'flex'},justifyContent:"space-between",flexGrow:1, alignItems:"center"}} >
-         <Button component="a" href="/" sx={{color:'white',p:2}}>Home</Button>
+        <Box sx={{display:{xs:'none', sm:'flex'},justifyContent:"center",flexGrow:1, alignItems:"center"}} >
          
           {navArrayLinks.map((item) => (
-          <Button component="a" href={item.path} key={item.tittle} sx={{color:'white',p:2}}>{item.tittle}</Button>
+          <Button component="a" href={item.path} key={item.tittle} sx={{color:'white',ml:2,mr:2,p:2, 
+            '&:hover': 
+            { backgroundColor: 'white',  transform: 'scale(1.05)', color:'primary.main',transition:'all 0.3s'   
+    }
+  }}>{item.tittle}</Button>
         ))}      
         </Box>
       </Toolbar>

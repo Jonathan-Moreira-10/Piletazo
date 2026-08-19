@@ -3,6 +3,10 @@ import NavBar from "./components/navBar/NavBar"
 import Footer from "./components/footer/Footer"
 import { Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
+import Actividades from "./pages/Actividades"
+import QuienesSomos from "./pages/QuienesSomos"
+import Contacto from "./pages/Contacto"
+
 
 const navArrayLinks =[
 {
@@ -25,26 +29,20 @@ function App() {
 
   return (
     <>
-    <CssBaseline />
-   <NavBar navArrayLinks={navArrayLinks} />
-<Container sx={{mt: 8, minHeight: "100vh",}}>
+<CssBaseline/>
+  <NavBar  navArrayLinks={navArrayLinks} />
+
   <Routes>
    <Route path="/" element={<Home />} />
-   <Route path="/actividades" element={<Actividades />} />
-   <Route path="/quienesSomos" element={<QuienesSomos />} />
-   <Route path="/contacto" element={<Contacto />} />
+   <Route path="/actividades" element={<Actividades/>} />
+   <Route path="/quienesSomos" element={<QuienesSomos/>} />
+   <Route path="/contacto" element={<Contacto/>} />
 
   </Routes>
 
-</Container>
 <Footer/>
-
-  
-
-
-
-
-    </>
+   
+</>
   )
 }
 
